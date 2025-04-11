@@ -30,10 +30,10 @@ const CourseCompletion = () => {
           </button>
 
           <button
-            onClick={() => navigate('/dashboard')}
+            onClick={() => navigate('/')}
             className="w-full flex items-center justify-center space-x-2 px-6 py-3 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
           >
-            <span>Go to Dashboard</span>
+            <span>Back to Home</span>
             <FaArrowRight />
           </button>
         </div>
