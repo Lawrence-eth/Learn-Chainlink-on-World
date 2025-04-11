@@ -1,0 +1,13 @@
+{
+  "name": "learn-chainlink-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "cd frontend && pnpm dev",
+    "build": "cd frontend && pnpm build",
+    "vercel-build": "cd frontend && pnpm build"
+  }
+} 
