@@ -586,6 +586,420 @@ Chainlink's scalable infrastructure makes it suitable for:
           ]
         }
       ]
+    },
+    'price-feeds': {
+      title: 'Chainlink Price Feeds',
+      sections: [
+        {
+          title: 'Introduction to Price Feeds',
+          content: 'Chainlink Price Feeds provide secure, reliable, and decentralized price data for various assets. These feeds are crucial for DeFi applications that require accurate price information for functions like lending, trading, and derivatives.',
+          image: '/images/lessons/chainlink-price-feeds.png',
+          keyPoints: [
+            {
+              title: 'Data Aggregation',
+              description: `Chainlink Price Feeds employ sophisticated data aggregation methods to ensure accurate and tamper-proof price data. The system collects data from multiple high-quality sources and uses various statistical methods to determine the final price.
+
+The aggregation process includes:
+1. Source Selection: Multiple independent data sources are selected based on:
+   - Historical reliability
+   - Data quality
+   - Update frequency
+   - Market coverage
+   - Geographic distribution
+
+2. Data Collection: Price data is collected from various sources:
+   - Centralized exchanges
+   - Decentralized exchanges
+   - Market makers
+   - Trading platforms
+   - Price aggregators
+
+3. Data Processing: The collected data undergoes rigorous processing:
+   - Outlier detection and removal
+   - Volume-weighted averaging
+   - Time-based aggregation
+   - Statistical validation
+   - Cross-validation with other sources
+
+4. Final Aggregation: The processed data is aggregated using:
+   - Volume-weighted median prices
+   - Time-weighted averages
+   - Statistical confidence intervals
+   - Market depth consideration
+   - Liquidity-weighted calculations
+
+The aggregation process ensures:
+- Protection against manipulation
+- Resistance to flash crashes
+- Accurate price representation
+- Market-wide coverage
+- High-frequency updates
+
+Chainlink's data aggregation has been proven in high-value DeFi applications, securing billions of dollars in value.`
+            },
+            {
+              title: 'Security Mechanisms',
+              description: `Chainlink Price Feeds implement multiple layers of security to protect against various attack vectors and ensure data integrity. These security mechanisms work together to create a robust and tamper-proof system.
+
+The security model includes:
+
+1. Decentralized Validation:
+   - Multiple independent nodes validate data
+   - Consensus mechanisms ensure accuracy
+   - Redundancy prevents single points of failure
+   - Geographic distribution enhances resilience
+
+2. Cryptographic Security:
+   - Digital signatures for data authenticity
+   - On-chain verification of signatures
+   - Immutable record of data submissions
+   - Proof of data source and processing
+
+3. Economic Security:
+   - Staking requirements for node operators
+   - Slashing conditions for incorrect data
+   - Reputation-based node selection
+   - Financial incentives for accuracy
+
+4. Operational Security:
+   - Regular security audits
+   - Continuous monitoring
+   - Incident response protocols
+   - Regular updates and patches
+
+5. Network Security:
+   - DDoS protection
+   - Rate limiting
+   - Access control
+   - Network segmentation
+
+The security mechanisms have been:
+- Audited by leading security firms
+- Tested in production environments
+- Proven in high-value applications
+- Validated by the DeFi community`
+            },
+            {
+              title: 'Use Cases',
+              description: `Chainlink Price Feeds are used across various DeFi applications and financial products. Their reliability and security make them the industry standard for price data.
+
+Key use cases include:
+
+1. Decentralized Exchanges (DEXs):
+   - Price discovery
+   - Trading execution
+   - Liquidity provision
+   - Order matching
+   - Slippage protection
+
+2. Lending Protocols:
+   - Collateral valuation
+   - Loan-to-value calculations
+   - Liquidation triggers
+   - Interest rate determination
+   - Risk assessment
+
+3. Derivatives Platforms:
+   - Price settlement
+   - Margin calculations
+   - Position management
+   - Risk management
+   - Contract settlement
+
+4. Stablecoins:
+   - Price pegging
+   - Collateral management
+   - Minting and burning
+   - Stability mechanisms
+   - Reserve management
+
+5. Insurance Products:
+   - Premium calculation
+   - Claim verification
+   - Payout determination
+   - Risk assessment
+   - Coverage management
+
+The price feeds have been integrated into:
+- Major DeFi protocols
+- Enterprise applications
+- Financial products
+- Insurance platforms
+- Gaming systems`
+            }
+          ]
+        }
+      ]
+    },
+    'vrf': {
+      title: 'Chainlink VRF',
+      sections: [
+        {
+          title: 'Introduction to VRF',
+          content: 'Chainlink VRF (Verifiable Random Function) provides provably fair and verifiable random numbers for blockchain applications. It combines cryptographic proofs with blockchain technology to ensure randomness that cannot be manipulated.',
+          image: '/images/lessons/chainlink-vrf.png',
+          keyPoints: [
+            {
+              title: 'Technical Architecture',
+              description: `Chainlink VRF's technical architecture combines cryptographic proofs with blockchain technology to create a secure and verifiable random number generation system.
+
+The architecture consists of:
+
+1. Cryptographic Components:
+   - Verifiable Random Function (VRF)
+   - Public/Private key pairs
+   - Digital signatures
+   - Hash functions
+   - Proof generation
+
+2. Blockchain Integration:
+   - Smart contract interfaces
+   - On-chain verification
+   - Gas optimization
+   - Transaction batching
+   - State management
+
+3. Node Infrastructure:
+   - Dedicated VRF nodes
+   - Key management
+   - Proof generation
+   - Response handling
+   - Monitoring systems
+
+4. Security Features:
+   - Private key protection
+   - Proof verification
+   - Anti-manipulation measures
+   - Audit trails
+   - Access control
+
+The technical architecture ensures:
+- Cryptographic security
+- Blockchain compatibility
+- High performance
+- Scalability
+- Reliability`
+            },
+            {
+              title: 'Use Cases',
+              description: `Chainlink VRF is used across various applications that require provably fair randomness. Its security and verifiability make it ideal for high-stakes applications.
+
+Key use cases include:
+
+1. Gaming and NFTs:
+   - Random item generation
+   - Character attributes
+   - Loot boxes
+   - Tournament seeding
+   - Prize distribution
+
+2. DeFi Applications:
+   - Random selection
+   - Fair distribution
+   - Protocol parameters
+   - Governance decisions
+   - Risk management
+
+3. Lottery Systems:
+   - Winner selection
+   - Prize distribution
+   - Ticket validation
+   - Draw verification
+   - Payout management
+
+4. Governance:
+   - Random selection
+   - Fair distribution
+   - Decision making
+   - Resource allocation
+   - Committee formation
+
+5. Security Applications:
+   - Key generation
+   - Access control
+   - Authentication
+   - Encryption
+   - Secure communication`
+            },
+            {
+              title: 'Security Model',
+              description: `Chainlink VRF implements a robust security model to ensure the integrity and fairness of random number generation. The model combines cryptographic proofs with economic incentives.
+
+The security model includes:
+
+1. Cryptographic Security:
+   - VRF algorithm
+   - Digital signatures
+   - Hash functions
+   - Proof verification
+   - Key management
+
+2. Economic Security:
+   - Staking requirements
+   - Slashing conditions
+   - Reputation system
+   - Financial incentives
+   - Penalty mechanisms
+
+3. Operational Security:
+   - Key protection
+   - Access control
+   - Monitoring systems
+   - Incident response
+   - Regular audits
+
+4. Network Security:
+   - Node distribution
+   - Consensus mechanisms
+   - Redundancy
+   - Fault tolerance
+   - Attack prevention
+
+The security model has been:
+- Mathematically proven
+- Cryptographically secure
+- Economically sound
+- Operationally robust
+- Network resilient`
+            }
+          ]
+        }
+      ]
+    },
+    'automation': {
+      title: 'Chainlink Automation',
+      sections: [
+        {
+          title: 'Introduction to Automation',
+          content: 'Chainlink Automation enables smart contracts to execute automatically based on predefined conditions. It provides reliable and secure automation services for various blockchain applications.',
+          image: '/images/lessons/chainlink-automation.png',
+          keyPoints: [
+            {
+              title: 'Technical Architecture',
+              description: `Chainlink Automation's technical architecture enables reliable and secure execution of smart contract functions based on predefined conditions.
+
+The architecture consists of:
+
+1. Core Components:
+   - Automation nodes
+   - Monitoring systems
+   - Execution engines
+   - Condition checkers
+   - Response handlers
+
+2. Smart Contract Integration:
+   - Interface contracts
+   - Condition definitions
+   - Execution triggers
+   - Response handling
+   - Error management
+
+3. Node Infrastructure:
+   - Dedicated automation nodes
+   - Monitoring systems
+   - Execution engines
+   - Response handlers
+   - Performance optimization
+
+4. Security Features:
+   - Access control
+   - Execution verification
+   - Error handling
+   - Audit trails
+   - Monitoring systems
+
+The technical architecture ensures:
+- Reliable execution
+- Secure operation
+- High performance
+- Scalability
+- Flexibility`
+            },
+            {
+              title: 'Use Cases',
+              description: `Chainlink Automation is used across various applications that require reliable and secure execution of smart contract functions.
+
+Key use cases include:
+
+1. DeFi Applications:
+   - Liquidation triggers
+   - Interest payments
+   - Rebalancing
+   - Position management
+   - Protocol updates
+
+2. NFT Systems:
+   - Metadata updates
+   - Dynamic pricing
+   - Royalty distribution
+   - Access control
+   - Content management
+
+3. Governance:
+   - Proposal execution
+   - Voting management
+   - Treasury operations
+   - Parameter updates
+   - System maintenance
+
+4. Supply Chain:
+   - Payment automation
+   - Status updates
+   - Quality checks
+   - Compliance verification
+   - Inventory management
+
+5. Insurance:
+   - Claim processing
+   - Payout automation
+   - Policy management
+   - Risk assessment
+   - Coverage updates`
+            },
+            {
+              title: 'Security and Reliability',
+              description: `Chainlink Automation implements robust security and reliability measures to ensure the safe and consistent execution of automated tasks.
+
+The security and reliability model includes:
+
+1. Execution Security:
+   - Access control
+   - Permission management
+   - Execution verification
+   - Error handling
+   - Audit trails
+
+2. Network Reliability:
+   - Node redundancy
+   - Geographic distribution
+   - Load balancing
+   - Performance monitoring
+   - Fault tolerance
+
+3. Operational Security:
+   - Regular audits
+   - Monitoring systems
+   - Incident response
+   - Update management
+   - Backup systems
+
+4. Smart Contract Security:
+   - Interface verification
+   - Condition validation
+   - Response handling
+   - Error management
+   - State verification
+
+The security and reliability model ensures:
+- Safe execution
+- Consistent operation
+- High availability
+- Fault tolerance
+- Secure operation`
+            }
+          ]
+        }
+      ]
     }
   };
 
