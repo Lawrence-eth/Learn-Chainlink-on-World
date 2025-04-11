@@ -104,16 +104,9 @@ const ModuleCard = ({ module }) => {
             >
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <Link 
-              to={lesson.path} 
-              className="hover:text-indigo-600" 
-              onClick={(e) => {
-                e.stopPropagation();
-                navigate(lesson.path);
-              }}
-            >
+            <span className="text-gray-700">
               {lesson.title}
-            </Link>
+            </span>
           </div>
         ))}
       </div>
