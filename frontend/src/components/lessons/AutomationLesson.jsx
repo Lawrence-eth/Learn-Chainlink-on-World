@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronRight, FaChevronLeft, FaCheck, FaLock, FaShieldAlt, FaCode, FaExchangeAlt, FaTimes, FaRobot } from 'react-icons/fa';
@@ -128,6 +128,7 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
   const handleNext = () => {
     if (activeSection < currentContent.sections.length - 1) {
       setActiveSection(activeSection + 1);
+      window.scrollTo(0, 0);
     } else {
       handleCompleteLesson();
     }
@@ -136,6 +137,7 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
   const handlePrevious = () => {
     if (activeSection > 0) {
       setActiveSection(activeSection - 1);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -153,6 +155,15 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
   const handleExit = () => {
     navigate('/');
   };
+
+  const handleSectionSelect = (index) => {
+    setActiveSection(index);
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [path]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
@@ -193,7 +204,7 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
                 {currentContent.sections.map((section, index) => (
                   <li key={index}>
                     <button
-                      onClick={() => setActiveSection(index)}
+                      onClick={() => handleSectionSelect(index)}
                       className={`w-full text-left px-3 sm:px-4 py-2 rounded-lg transition-colors touch-manipulation ${
                         index === activeSection
                           ? 'bg-indigo-100 text-indigo-900'

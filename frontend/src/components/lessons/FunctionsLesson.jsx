@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronRight, FaChevronLeft, FaCheck, FaLock, FaShieldAlt, FaCode, FaExchangeAlt, FaTimes, FaServer } from 'react-icons/fa';
@@ -187,6 +187,7 @@ Finally, consider implementing monitoring and alerting systems to quickly identi
   const handleNext = () => {
     if (activeSection < currentContent.sections.length - 1) {
       setActiveSection(activeSection + 1);
+      window.scrollTo(0, 0);
     } else {
       handleCompleteLesson();
     }
@@ -195,6 +196,7 @@ Finally, consider implementing monitoring and alerting systems to quickly identi
   const handlePrevious = () => {
     if (activeSection > 0) {
       setActiveSection(activeSection - 1);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -212,6 +214,17 @@ Finally, consider implementing monitoring and alerting systems to quickly identi
   const handleExit = () => {
     navigate('/');
   };
+
+  // Add this function to handle section selection from the sidebar
+  const handleSectionSelect = (index) => {
+    setActiveSection(index);
+    window.scrollTo(0, 0);
+  };
+
+  // Scroll to top when the component mounts or the path changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [path]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
@@ -252,7 +265,7 @@ Finally, consider implementing monitoring and alerting systems to quickly identi
                 {currentContent.sections.map((section, index) => (
                   <li key={index}>
                     <button
-                      onClick={() => setActiveSection(index)}
+                      onClick={() => handleSectionSelect(index)}
                       className={`w-full text-left px-3 sm:px-4 py-2 rounded-lg transition-colors touch-manipulation ${
                         index === activeSection
                           ? 'bg-indigo-100 text-indigo-900'
