@@ -14,7 +14,7 @@ const modules = [
     description: 'Learn the basics of Chainlink and its role in blockchain technology',
     component: IntroductionLesson,
     lessons: [
-      { title: 'What is Chainlink?', path: '/introduction/what-is-chainlink' },
+      { title: 'What is Chainlink?', path: '/what-is-chainlink' },
       { title: 'How Chainlink Works', path: '/introduction/how-it-works' },
       { title: 'Use Cases and Applications', path: '/introduction/use-cases' }
     ]
@@ -26,7 +26,6 @@ const modules = [
     component: PriceFeedsLesson,
     lessons: [
       { title: 'Understanding Price Feeds', path: '/price-feeds/understanding' },
-      { title: 'Implementing Price Feeds', path: '/price-feeds/implementation' },
       { title: 'Best Practices', path: '/price-feeds/best-practices' }
     ]
   },
