@@ -108,9 +108,14 @@ const ModuleCard = ({ module }) => {
 
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className="bg-[rgb(245,247,252)] rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition-all"
+      whileHover={{ scale: 1.01 }}
+      whileTap={{ scale: 0.99 }}
+      transition={{ 
+        type: "spring",
+        stiffness: 300,
+        damping: 20
+      }}
+      className="bg-[rgb(245,247,252)] rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition-all active:scale-95"
       onClick={() => navigate(`/module/${module.id}`)}
     >
       <div className="flex items-center mb-4">
@@ -165,17 +170,17 @@ const ModuleContent = () => {
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
-      <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-indigo-900 mb-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 sm:p-8">
+      <header className="text-center mb-8 sm:mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold text-indigo-900 mb-3 sm:mb-4">
           Learn Chainlink
         </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-base sm:text-lg text-gray-600">
           Master the world's leading oracle network
         </p>
       </header>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         {modules.map((module) => (
           <ModuleCard key={module.id} module={module} />
         ))}
