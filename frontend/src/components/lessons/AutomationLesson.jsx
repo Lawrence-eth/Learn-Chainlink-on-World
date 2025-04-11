@@ -156,22 +156,22 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-4xl font-bold text-indigo-900">{currentContent.title}</h1>
-          <div className="flex items-center space-x-4">
+      <div className="max-w-6xl mx-auto px-4 py-4 sm:py-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-8 gap-3">
+          <h1 className="text-2xl sm:text-4xl font-bold text-indigo-900">{currentContent.title}</h1>
+          <div className="flex items-center justify-between sm:justify-end w-full sm:w-auto gap-4">
             <button
               onClick={handleExit}
-              className="p-2 text-gray-500 hover:text-gray-700"
+              className="p-2 text-gray-500 hover:text-gray-700 touch-manipulation"
               title="Exit Lesson"
             >
-              <FaTimes size={24} />
+              <FaTimes size={20} />
             </button>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-1 sm:space-x-2">
               {currentContent.sections.map((_, index) => (
                 <div
                   key={index}
-                  className={`w-3 h-3 rounded-full ${
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full ${
                     completedSections.includes(index)
                       ? 'bg-green-500'
                       : index === activeSection
@@ -184,26 +184,26 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-8">
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl shadow-lg p-6 sticky top-8">
-              <h2 className="text-xl font-semibold text-indigo-900 mb-4">Course Content</h2>
-              <ul className="space-y-2">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 sticky top-2 sm:top-8 z-10">
+              <h2 className="text-lg sm:text-xl font-semibold text-indigo-900 mb-3 sm:mb-4">Course Content</h2>
+              <ul className="space-y-1 sm:space-y-2">
                 {currentContent.sections.map((section, index) => (
                   <li key={index}>
                     <button
                       onClick={() => setActiveSection(index)}
-                      className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
+                      className={`w-full text-left px-3 sm:px-4 py-2 rounded-lg transition-colors touch-manipulation ${
                         index === activeSection
                           ? 'bg-indigo-100 text-indigo-900'
                           : 'hover:bg-gray-100'
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span>{section.title}</span>
+                        <span className="text-sm sm:text-base">{section.title}</span>
                         {completedSections.includes(index) && (
-                          <FaCheck className="text-green-500" />
+                          <FaCheck className="text-green-500 text-sm sm:text-base" />
                         )}
                       </div>
                     </button>
@@ -222,13 +222,13 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-xl shadow-lg p-8"
+                className="bg-white rounded-xl shadow-lg p-4 sm:p-8"
               >
-                <h2 className="text-2xl font-semibold text-indigo-900 mb-6">
+                <h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4 sm:mb-6">
                   {currentContent.sections[activeSection].title}
                 </h2>
 
-                <div className="space-y-8">
+                <div className="space-y-6 sm:space-y-8">
                   {Array.isArray(currentContent.sections[activeSection].content) ? (
                     currentContent.sections[activeSection].content.map((section, index) => (
                       <motion.div
@@ -236,44 +236,45 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="bg-indigo-50 p-6 rounded-lg shadow-sm"
+                        className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-sm"
                       >
-                        <h3 className="text-xl font-semibold text-indigo-900 mb-3">
+                        <h3 className="text-lg sm:text-xl font-semibold text-indigo-900 mb-2 sm:mb-3">
                           {section.title}
                         </h3>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                           {section.text}
                         </p>
                         {section.image && (
-                          <div className="mt-4">
+                          <div className="mt-3 sm:mt-4">
                             <img
                               src={section.image}
                               alt={section.title}
                               className="w-full rounded-lg shadow-md"
+                              loading="lazy"
                             />
                           </div>
                         )}
                       </motion.div>
                     ))
                   ) : (
-                    <div className="prose max-w-none mb-8">
-                      <p className="text-gray-700 leading-relaxed">
+                    <div className="prose max-w-none mb-6 sm:mb-8">
+                      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                         {currentContent.sections[activeSection].content}
                       </p>
                     </div>
                   )}
                 </div>
 
-                <div className="space-y-12">
+                <div className="space-y-8 sm:space-y-12">
                   {currentContent.sections[activeSection].keyPoints?.map((point, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-indigo-50 p-6 rounded-lg shadow-sm mt-8"
+                      className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-sm mt-6 sm:mt-8"
                     >
-                      <h3 className="text-xl font-semibold text-indigo-900 mb-3 flex items-center">
+                      <h3 className="text-lg sm:text-xl font-semibold text-indigo-900 mb-2 sm:mb-3 flex items-center">
                         {point.title === 'Decentralized oracle network' && <FaExchangeAlt className="mr-2" />}
                         {point.title === 'Secure data delivery' && <FaLock className="mr-2" />}
                         {point.title === 'Smart contract connectivity' && <FaCode className="mr-2" />}
@@ -281,32 +282,32 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
                         {point.title === 'Automated execution' && <FaRobot className="mr-2" />}
                         {point.title}
                       </h3>
-                      <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                      <p className="text-sm sm:text-base text-gray-700 leading-relaxed whitespace-pre-line">
                         {point.description}
                       </p>
                     </motion.div>
                   ))}
                 </div>
 
-                <div className="flex justify-between mt-8">
+                <div className="flex justify-between mt-6 sm:mt-8 pt-2">
                   <button
                     onClick={handlePrevious}
                     disabled={activeSection === 0}
-                    className={`px-6 py-2 rounded-lg flex items-center space-x-2 ${
+                    className={`px-4 sm:px-6 py-2 rounded-lg flex items-center space-x-1 sm:space-x-2 touch-manipulation ${
                       activeSection === 0
                         ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                        : 'bg-indigo-100 text-indigo-900 hover:bg-indigo-200'
+                        : 'bg-indigo-100 text-indigo-900 hover:bg-indigo-200 active:bg-indigo-300'
                     }`}
                   >
                     <FaChevronLeft />
-                    <span>Previous</span>
+                    <span className="text-sm sm:text-base">Previous</span>
                   </button>
 
                   <button
                     onClick={handleNext}
-                    className="px-6 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 flex items-center space-x-2"
+                    className="px-4 sm:px-6 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 active:bg-indigo-800 flex items-center space-x-1 sm:space-x-2 touch-manipulation"
                   >
-                    <span>
+                    <span className="text-sm sm:text-base">
                       {activeSection === currentContent.sections.length - 1
                         ? 'Complete Lesson'
                         : 'Next'}
