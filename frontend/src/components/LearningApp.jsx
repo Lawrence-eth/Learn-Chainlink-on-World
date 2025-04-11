@@ -5,6 +5,7 @@ import IntroductionLesson from './lessons/IntroductionLesson';
 import PriceFeedsLesson from './lessons/PriceFeedsLesson';
 import VRFLesson from './lessons/VRFLesson';
 import AutomationLesson from './lessons/AutomationLesson';
+import CCIPLesson from './lessons/CCIPLesson';
 import CourseCompletion from './lessons/CourseCompletion';
 
 const modules = [
@@ -47,6 +48,16 @@ const modules = [
     lessons: [
       { title: 'Understanding Automation', path: '/automation/understanding' },
       { title: 'Automation in the Real World', path: '/automation/real-world' }
+    ]
+  },
+  {
+    id: 5,
+    title: 'Chainlink CCIP',
+    description: 'Explore cross-chain interoperability solutions',
+    component: CCIPLesson,
+    lessons: [
+      { title: 'Understanding CCIP', path: '/ccip/understanding' },
+      { title: 'CCIP in the Real World', path: '/ccip/real-world' }
     ]
   }
 ];
@@ -136,6 +147,7 @@ const LearningApp = () => {
           <Route path="/price-feeds/*" element={<PriceFeedsLesson />} />
           <Route path="/vrf/*" element={<VRFLesson />} />
           <Route path="/automation/*" element={<AutomationLesson />} />
+          <Route path="/ccip/*" element={<CCIPLesson />} />
           <Route path="/course-completion" element={<CourseCompletion />} />
         </Routes>
       </div>
