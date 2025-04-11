@@ -112,10 +112,11 @@ const ModuleCard = ({ module }) => {
       whileTap={{ scale: 0.99 }}
       transition={{ 
         type: "spring",
-        stiffness: 300,
-        damping: 20
+        stiffness: 200,
+        damping: 25,
+        mass: 1
       }}
-      className="bg-[rgb(245,247,252)] rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition-all active:scale-95"
+      className="bg-[rgb(245,247,252)] rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition-all active:scale-95 will-change-transform"
       onClick={() => navigate(`/module/${module.id}`)}
     >
       <div className="flex items-center mb-4">

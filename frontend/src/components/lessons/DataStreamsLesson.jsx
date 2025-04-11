@@ -287,11 +287,14 @@ As traditional financial systems and web3 continue to integrate, Data Streams wi
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeSection}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 10 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
-                className="bg-white rounded-xl shadow-lg p-4 sm:p-8"
+                exit={{ opacity: 0, x: -10 }}
+                transition={{ 
+                  duration: 0.5,
+                  ease: "easeInOut"
+                }}
+                className="bg-white rounded-xl shadow-lg p-4 sm:p-8 will-change-transform"
               >
                 <h2 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4 sm:mb-6">
                   {currentContent.sections[activeSection].title}
@@ -302,10 +305,14 @@ As traditional financial systems and web3 continue to integrate, Data Streams wi
                     currentContent.sections[activeSection].content.map((section, index) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-sm"
+                        transition={{ 
+                          delay: index * 0.15,
+                          duration: 0.4,
+                          ease: "easeOut"
+                        }}
+                        className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-sm will-change-transform"
                       >
                         <h3 className="text-lg sm:text-xl font-semibold text-indigo-900 mb-2 sm:mb-3">
                           {section.title}
@@ -314,23 +321,39 @@ As traditional financial systems and web3 continue to integrate, Data Streams wi
                           {section.text}
                         </p>
                         {section.image && (
-                          <div className="mt-3 sm:mt-4">
+                          <motion.div 
+                            className="mt-3 sm:mt-4"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ 
+                              delay: 0.2,
+                              duration: 0.4
+                            }}
+                          >
                             <img
                               src={section.image}
                               alt={section.title}
                               className="w-full rounded-lg shadow-md"
                               loading="lazy"
                             />
-                          </div>
+                          </motion.div>
                         )}
                       </motion.div>
                     ))
                   ) : (
-                    <div className="prose max-w-none mb-6 sm:mb-8">
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ 
+                        duration: 0.4,
+                        ease: "easeOut"
+                      }}
+                      className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-sm will-change-transform"
+                    >
                       <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                         {currentContent.sections[activeSection].content}
                       </p>
-                    </div>
+                    </motion.div>
                   )}
                 </div>
 
