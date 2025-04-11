@@ -16,7 +16,7 @@ const modules = [
     description: 'Learn the basics of Chainlink and its role in blockchain technology',
     component: IntroductionLesson,
     lessons: [
-      { title: 'What is Chainlink?', path: '/introduction/understanding' },
+      { title: 'What is Chainlink?', path: '/introduction/what-is-chainlink' },
       { title: 'How Chainlink Works', path: '/introduction/how-it-works' },
       { title: 'Use Cases and Applications', path: '/introduction/use-cases' }
     ]
