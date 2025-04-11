@@ -102,13 +102,11 @@ const ModuleCard = ({ module }) => {
       onClick={() => navigate(`/module/${module.id}`)}
     >
       <div className="flex items-center mb-4">
-        <div className="bg-indigo-100 p-3 rounded-full mr-4 flex items-center justify-center">
-          <img 
-            src={module.iconPath} 
-            alt={`${module.title} icon`} 
-            className="w-8 h-8 object-contain"
-          />
-        </div>
+        <img 
+          src={module.iconPath} 
+          alt={`${module.title} icon`} 
+          className="w-10 h-10 object-contain mr-4"
+        />
         <h2 className="text-2xl font-semibold text-indigo-800">
           {module.title}
         </h2>
