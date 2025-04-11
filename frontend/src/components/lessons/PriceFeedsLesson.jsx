@@ -299,7 +299,7 @@ contract PriceConsumerV3 {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="bg-indigo-50 p-6 rounded-lg"
+                        className="bg-indigo-50 p-6 rounded-lg shadow-sm"
                       >
                         <h3 className="text-xl font-semibold text-indigo-900 mb-3">
                           {section.title}
@@ -327,14 +327,14 @@ contract PriceConsumerV3 {
                   )}
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-12">
                   {currentContent.sections[activeSection].keyPoints?.map((point, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-indigo-50 p-6 rounded-lg"
+                      className="bg-indigo-50 p-6 rounded-lg shadow-sm mt-8"
                     >
                       <h3 className="text-xl font-semibold text-indigo-900 mb-3 flex items-center">
                         {point.title === 'Decentralized oracle network' && <FaExchangeAlt className="mr-2" />}
