@@ -10,6 +10,15 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'router-vendor': ['react-router-dom'],
+          'animation-vendor': ['framer-motion']
+        }
+      }
+    }
   },
   resolve: {
     alias: {
