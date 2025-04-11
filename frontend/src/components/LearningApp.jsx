@@ -8,6 +8,7 @@ import AutomationLesson from './lessons/AutomationLesson';
 import CCIPLesson from './lessons/CCIPLesson';
 import ProofOfReserveLesson from './lessons/ProofOfReserveLesson';
 import FunctionsLesson from './lessons/FunctionsLesson';
+import DataStreamsLesson from './lessons/DataStreamsLesson';
 import CourseCompletion from './lessons/CourseCompletion';
 
 const modules = [
@@ -87,6 +88,17 @@ const modules = [
     lessons: [
       { title: 'The Power of Web3 Functions', path: '/functions/understanding' },
       { title: 'Technical Implementation', path: '/functions/implementation' }
+    ]
+  },
+  {
+    id: 8,
+    title: 'Chainlink Data Streams',
+    description: 'Explore real-time data streaming capabilities',
+    component: DataStreamsLesson,
+    iconPath: '/images/icons/data-streams-icon.png',
+    lessons: [
+      { title: 'Understanding Data Streams', path: '/data-streams/understanding' },
+      { title: 'Data Streams in the Real World', path: '/data-streams/real-world' }
     ]
   }
 ];
@@ -186,6 +198,7 @@ const LearningApp = () => {
           <Route path="/ccip/*" element={<CCIPLesson />} />
           <Route path="/proof-of-reserve/*" element={<ProofOfReserveLesson />} />
           <Route path="/functions/*" element={<FunctionsLesson />} />
+          <Route path="/data-streams/*" element={<DataStreamsLesson />} />
           <Route path="/course-completion" element={<CourseCompletion />} />
         </Routes>
       </div>
