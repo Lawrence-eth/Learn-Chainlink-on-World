@@ -20,8 +20,7 @@ const DataStreamsLesson = () => {
           content: [
             {
               title: 'Beyond Periodic Updates',
-              text: `Imagine a financial application that only updates prices every hour in a market that changes by the second. This is the challenge that Chainlink Data Streams solves. Unlike traditional oracle solutions that provide periodic updates, Data Streams delivers continuous, real-time data flows directly to your applications, enabling a new generation of responsive and precise blockchain solutions.`,
-              image: '/images/lessons/chainlink-datastreams.png'
+              text: `Imagine a financial application that only updates prices every hour in a market that changes by the second. This is the challenge that Chainlink Data Streams solves. Unlike traditional oracle solutions that provide periodic updates, Data Streams delivers continuous, real-time data flows directly to your applications, enabling a new generation of responsive and precise blockchain solutions.`
             },
             {
               title: 'A New Paradigm for Blockchain Data',
@@ -72,8 +71,7 @@ What's particularly powerful about this approach is how it scales. As more appli
           content: [
             {
               title: 'Revolutionizing DeFi Trading',
-              text: `The most immediate impact of Chainlink Data Streams can be seen in DeFi trading platforms. Traditional DEXs rely on periodic price updates, creating opportunities for frontrunning and inefficient price execution. With Data Streams, these platforms can now offer millisecond-level price accuracy, enabling advanced trading strategies like limit orders, stop losses, and algorithmically managed positions that previously were only available on centralized exchanges.`,
-              image: '/images/lessons/defi-trading.png'
+              text: `The most immediate impact of Chainlink Data Streams can be seen in DeFi trading platforms. Traditional DEXs rely on periodic price updates, creating opportunities for frontrunning and inefficient price execution. With Data Streams, these platforms can now offer millisecond-level price accuracy, enabling advanced trading strategies like limit orders, stop losses, and algorithmically managed positions that previously were only available on centralized exchanges.`
             },
             {
               title: 'Enabling Responsive Insurance',
@@ -129,8 +127,7 @@ Perhaps most importantly, Data Streams is showing that blockchain applications d
           content: [
             {
               title: 'High-Frequency DeFi Trading',
-              text: `The most transformative application of Data Streams can be seen in high-frequency trading protocols. These platforms leverage millisecond-level price updates to offer sophisticated trading features like true limit orders (not approximations), real-time portfolio rebalancing, and automatic arbitrage execution across multiple venues. The result is DeFi trading experiences that rival traditional finance in both functionality and performance, while maintaining the transparency and accessibility benefits of decentralized systems.`,
-              image: '/images/lessons/high-frequency-trading.png'
+              text: `The most transformative application of Data Streams can be seen in high-frequency trading protocols. These platforms leverage millisecond-level price updates to offer sophisticated trading features like true limit orders (not approximations), real-time portfolio rebalancing, and automatic arbitrage execution across multiple venues. The result is DeFi trading experiences that rival traditional finance in both functionality and performance, while maintaining the transparency and accessibility benefits of decentralized systems.`
             },
             {
               title: 'Real-Time Risk Management',
@@ -320,24 +317,6 @@ As traditional financial systems and web3 continue to integrate, Data Streams wi
                         <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                           {section.text}
                         </p>
-                        {section.image && (
-                          <motion.div 
-                            className="mt-3 sm:mt-4"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ 
-                              delay: 0.2,
-                              duration: 0.4
-                            }}
-                          >
-                            <img
-                              src={section.image}
-                              alt={section.title}
-                              className="w-full rounded-lg shadow-md"
-                              loading="lazy"
-                            />
-                          </motion.div>
-                        )}
                       </motion.div>
                     ))
                   ) : (
