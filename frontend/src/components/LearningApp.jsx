@@ -7,6 +7,7 @@ import VRFLesson from './lessons/VRFLesson';
 import AutomationLesson from './lessons/AutomationLesson';
 import CCIPLesson from './lessons/CCIPLesson';
 import ProofOfReserveLesson from './lessons/ProofOfReserveLesson';
+import FunctionsLesson from './lessons/FunctionsLesson';
 import CourseCompletion from './lessons/CourseCompletion';
 
 const modules = [
@@ -68,7 +69,17 @@ const modules = [
     component: ProofOfReserveLesson,
     lessons: [
       { title: 'The Foundation of Trust in DeFi', path: '/proof-of-reserve/understanding' },
-      { title: 'Proof of Reserve in Practice', path: '/proof-of-reserve/implementation' }
+      { title: 'Technical Implementation', path: '/proof-of-reserve/implementation' }
+    ]
+  },
+  {
+    id: 7,
+    title: 'Chainlink Functions',
+    description: 'Learn about connecting smart contracts to any API',
+    component: FunctionsLesson,
+    lessons: [
+      { title: 'The Power of Web3 Functions', path: '/functions/understanding' },
+      { title: 'Technical Implementation', path: '/functions/implementation' }
     ]
   }
 ];
@@ -160,6 +171,7 @@ const LearningApp = () => {
           <Route path="/automation/*" element={<AutomationLesson />} />
           <Route path="/ccip/*" element={<CCIPLesson />} />
           <Route path="/proof-of-reserve/*" element={<ProofOfReserveLesson />} />
+          <Route path="/functions/*" element={<FunctionsLesson />} />
           <Route path="/course-completion" element={<CourseCompletion />} />
         </Routes>
       </div>
