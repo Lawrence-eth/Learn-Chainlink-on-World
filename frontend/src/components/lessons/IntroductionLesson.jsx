@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaChevronRight, FaChevronLeft, FaCheck, FaLock, FaShieldAlt, FaCode, FaExchangeAlt } from 'react-icons/fa';
+import { FaChevronRight, FaChevronLeft, FaCheck, FaLock, FaShieldAlt, FaCode, FaExchangeAlt, FaTimes } from 'react-icons/fa';
 
 const IntroductionLesson = () => {
   const { '*': path } = useParams();
+  const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState(0);
   const [completedSections, setCompletedSections] = useState([]);
   const [showQuiz, setShowQuiz] = useState(false);
@@ -48,6 +49,96 @@ The network also implements various anti-manipulation measures, such as time-bas
 Chainlink's secure data delivery has been proven in high-value environments, securing billions of dollars in DeFi applications. Its security model has been audited by multiple security firms and has withstood numerous stress tests in production environments.`
             }
           ]
+        },
+        {
+          title: 'Core Components',
+          content: 'Chainlink consists of several key components that work together to provide secure and reliable oracle services:',
+          image: '/images/lessons/chainlink-architecture.png',
+          keyPoints: [
+            {
+              title: 'Chainlink Nodes',
+              description: 'Independent operators that retrieve, validate, and deliver data to smart contracts. They are responsible for maintaining the network and ensuring data accuracy.'
+            },
+            {
+              title: 'Chainlink Network',
+              description: 'A decentralized network of nodes that work together to provide reliable data. The network ensures redundancy and prevents single points of failure.'
+            }
+          ]
+        },
+        {
+          title: 'Use Cases',
+          content: 'Chainlink enables a wide range of applications across various industries:',
+          image: '/images/lessons/chainlink-use-cases.png',
+          keyPoints: [
+            {
+              title: 'DeFi Applications',
+              description: 'Chainlink is widely used in DeFi for price feeds, lending protocols, and derivatives trading. It provides reliable data for critical financial operations.'
+            },
+            {
+              title: 'Enterprise Solutions',
+              description: 'Many enterprises use Chainlink for supply chain tracking, insurance products, and gaming applications. It provides secure and reliable data for business operations.'
+            }
+          ]
+        }
+      ]
+    },
+    'price-feeds': {
+      title: 'Chainlink Price Feeds',
+      sections: [
+        {
+          title: 'Introduction to Price Feeds',
+          content: 'Chainlink Price Feeds provide secure, reliable, and decentralized price data for various assets. These feeds are crucial for DeFi applications that require accurate price information.',
+          image: '/images/lessons/chainlink-price-feeds.png',
+          keyPoints: [
+            {
+              title: 'What are Price Feeds?',
+              description: 'Chainlink Price Feeds are decentralized oracle networks that provide real-time price data for various assets to smart contracts on blockchain networks.'
+            },
+            {
+              title: 'How They Work',
+              description: 'Price feeds aggregate data from multiple sources, validate it through a decentralized network, and deliver it to smart contracts in a secure and reliable manner.'
+            }
+          ]
+        }
+      ]
+    },
+    'vrf': {
+      title: 'Chainlink VRF',
+      sections: [
+        {
+          title: 'Introduction to VRF',
+          content: 'Chainlink VRF (Verifiable Random Function) provides provably fair and verifiable random numbers for blockchain applications.',
+          image: '/images/lessons/chainlink-vrf.png',
+          keyPoints: [
+            {
+              title: 'What is VRF?',
+              description: 'VRF is a cryptographic function that generates random numbers that can be verified as fair and unbiased.'
+            },
+            {
+              title: 'Use Cases',
+              description: 'VRF is used in gaming, lotteries, and other applications that require provably fair randomness.'
+            }
+          ]
+        }
+      ]
+    },
+    'automation': {
+      title: 'Chainlink Automation',
+      sections: [
+        {
+          title: 'Introduction to Automation',
+          content: 'Chainlink Automation enables smart contracts to execute automatically based on predefined conditions.',
+          image: '/images/lessons/chainlink-automation.png',
+          keyPoints: [
+            {
+              title: 'What is Automation?',
+              description: 'Automation allows smart contracts to perform actions automatically when certain conditions are met.'
+            },
+            {
+              title: 'Applications',
+              description: 'Automation is used in DeFi protocols, NFT systems, and other blockchain applications.'
+            }
+          ]
         }
       ]
     }
@@ -59,7 +150,7 @@ Chainlink's secure data delivery has been proven in high-value environments, sec
     if (activeSection < currentContent.sections.length - 1) {
       setActiveSection(activeSection + 1);
     } else {
-      setShowQuiz(true);
+      handleCompleteLesson();
     }
   };
 
@@ -75,9 +166,15 @@ Chainlink's secure data delivery has been proven in high-value environments, sec
     }
   };
 
-  const handleQuizSubmit = () => {
-    // Handle quiz submission logic here
-    console.log('Quiz answers:', quizAnswers);
+  const handleCompleteLesson = () => {
+    // Mark all sections as completed
+    setCompletedSections(Array.from({ length: currentContent.sections.length }, (_, i) => i));
+    // Navigate to the next lesson or course completion page
+    navigate('/course-completion');
+  };
+
+  const handleExit = () => {
+    navigate('/lessons');
   };
 
   return (
@@ -86,6 +183,13 @@ Chainlink's secure data delivery has been proven in high-value environments, sec
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-4xl font-bold text-indigo-900">{currentContent.title}</h1>
           <div className="flex items-center space-x-4">
+            <button
+              onClick={handleExit}
+              className="p-2 text-gray-500 hover:text-gray-700"
+              title="Exit Lesson"
+            >
+              <FaTimes size={24} />
+            </button>
             <div className="flex items-center space-x-2">
               {currentContent.sections.map((_, index) => (
                 <div
