@@ -14,7 +14,7 @@ const modules = [
     description: 'Learn the basics of Chainlink and its role in blockchain technology',
     component: IntroductionLesson,
     lessons: [
-      { title: 'What is Chainlink?', path: '/what-is-chainlink' },
+      { title: 'What is Chainlink?', path: '/introduction/understanding' },
       { title: 'How Chainlink Works', path: '/introduction/how-it-works' },
       { title: 'Use Cases and Applications', path: '/introduction/use-cases' }
     ]
@@ -35,9 +35,8 @@ const modules = [
     description: 'Learn about Verifiable Random Functions',
     component: VRFLesson,
     lessons: [
-      { title: 'VRF Basics', path: '/vrf/basics' },
-      { title: 'Implementation Guide', path: '/vrf/implementation' },
-      { title: 'Security Considerations', path: '/vrf/security' }
+      { title: 'Understanding VRF', path: '/vrf/understanding' },
+      { title: 'VRF in the Real World', path: '/vrf/real-world' }
     ]
   },
   {
@@ -46,9 +45,8 @@ const modules = [
     description: 'Explore automated smart contract execution',
     component: AutomationLesson,
     lessons: [
-      { title: 'Automation Overview', path: '/automation/overview' },
-      { title: 'Setting Up Automation', path: '/automation/setup' },
-      { title: 'Advanced Features', path: '/automation/advanced' }
+      { title: 'Understanding Automation', path: '/automation/understanding' },
+      { title: 'Automation in the Real World', path: '/automation/real-world' }
     ]
   }
 ];
