@@ -180,7 +180,8 @@ Another key consideration is interoperability. As DeFi becomes more interconnect
     }
   };
 
-  const currentContent = content[path] || content['understanding'];
+  const pathSegment = path ? path.split('/').pop() : 'understanding';
+  const currentContent = content[pathSegment] || content['understanding'];
 
   const handleNext = () => {
     if (activeSection < currentContent.sections.length - 1) {
