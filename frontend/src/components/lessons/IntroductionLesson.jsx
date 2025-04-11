@@ -11,17 +11,22 @@ const IntroductionLesson = () => {
         {
           title: 'Introduction to Chainlink',
           content: 'Chainlink is a decentralized oracle network that enables smart contracts to securely interact with real-world data and external APIs. It acts as a bridge between blockchain networks and the outside world, providing reliable, tamper-proof inputs and outputs for complex smart contracts.',
+          image: '/images/lessons/chainlink-bridge.png',
           keyPoints: [
             'Decentralized oracle network',
             'Secure data delivery',
             'Multiple data sources',
             'Tamper-proof data',
-            'Smart contract connectivity'
+            'Smart contract connectivity',
+            'Cross-chain interoperability',
+            'Enterprise-grade security',
+            'Scalable infrastructure'
           ]
         },
         {
           title: 'Core Components',
           content: 'Chainlink consists of several key components that work together to provide secure and reliable oracle services:',
+          image: '/images/lessons/chainlink-architecture.png',
           components: [
             {
               name: 'Chainlink Nodes',
@@ -30,7 +35,9 @@ const IntroductionLesson = () => {
                 'Data sourcing',
                 'Data validation',
                 'Data delivery',
-                'Reputation management'
+                'Reputation management',
+                'Performance monitoring',
+                'Service level agreements'
               ]
             },
             {
@@ -40,7 +47,9 @@ const IntroductionLesson = () => {
                 'Decentralized consensus',
                 'Fault tolerance',
                 'Data aggregation',
-                'Network security'
+                'Network security',
+                'Load balancing',
+                'Geographic distribution'
               ]
             },
             {
@@ -50,7 +59,9 @@ const IntroductionLesson = () => {
                 'Service agreements',
                 'Payment processing',
                 'Reputation tracking',
-                'Dispute resolution'
+                'Dispute resolution',
+                'Automated settlements',
+                'Contract upgrades'
               ]
             }
           ]
@@ -58,6 +69,7 @@ const IntroductionLesson = () => {
         {
           title: 'Use Cases',
           content: 'Chainlink enables a wide range of applications across various industries:',
+          image: '/images/lessons/chainlink-use-cases.png',
           useCases: [
             {
               category: 'DeFi',
@@ -66,7 +78,10 @@ const IntroductionLesson = () => {
                 'Lending protocols',
                 'Insurance products',
                 'Derivatives trading',
-                'Yield farming'
+                'Yield farming',
+                'Automated market makers',
+                'Liquidity pools',
+                'Stablecoin mechanisms'
               ]
             },
             {
@@ -76,7 +91,10 @@ const IntroductionLesson = () => {
                 'In-game events',
                 'Reward distribution',
                 'NFT minting',
-                'Tournament results'
+                'Tournament results',
+                'Player rankings',
+                'Item rarity',
+                'Cross-game assets'
               ]
             },
             {
@@ -86,7 +104,10 @@ const IntroductionLesson = () => {
                 'Flight delays',
                 'Natural disasters',
                 'Crop insurance',
-                'Health insurance'
+                'Health insurance',
+                'Auto insurance',
+                'Property insurance',
+                'Supply chain insurance'
               ]
             },
             {
@@ -96,7 +117,10 @@ const IntroductionLesson = () => {
                 'Quality verification',
                 'Automated payments',
                 'Inventory management',
-                'Compliance tracking'
+                'Compliance tracking',
+                'Temperature monitoring',
+                'Location tracking',
+                'Customs clearance'
               ]
             }
           ]
@@ -109,6 +133,7 @@ const IntroductionLesson = () => {
         {
           title: 'Architecture Overview',
           content: 'Chainlink\'s architecture is designed to provide secure, reliable, and decentralized oracle services. It consists of three main layers:',
+          image: '/images/lessons/chainlink-layers.png',
           layers: [
             {
               name: 'On-chain Layer',
@@ -117,7 +142,9 @@ const IntroductionLesson = () => {
                 'Reputation contracts',
                 'Order-matching contracts',
                 'Aggregating contracts',
-                'Service agreements'
+                'Service agreements',
+                'Payment contracts',
+                'Access control'
               ]
             },
             {
@@ -127,7 +154,9 @@ const IntroductionLesson = () => {
                 'External adapters',
                 'Node operators',
                 'Data processing',
-                'Result aggregation'
+                'Result aggregation',
+                'API integration',
+                'Data transformation'
               ]
             },
             {
@@ -137,7 +166,9 @@ const IntroductionLesson = () => {
                 'Node selection',
                 'Data collection',
                 'Result verification',
-                'Consensus mechanism'
+                'Consensus mechanism',
+                'Network monitoring',
+                'Performance optimization'
               ]
             }
           ]
@@ -145,6 +176,7 @@ const IntroductionLesson = () => {
         {
           title: 'Data Flow Process',
           content: 'The process of getting data from external sources to smart contracts involves several steps:',
+          image: '/images/lessons/chainlink-data-flow.png',
           steps: [
             {
               step: 1,
@@ -181,6 +213,7 @@ const IntroductionLesson = () => {
         {
           title: 'Security Mechanisms',
           content: 'Chainlink implements multiple security measures to ensure data reliability:',
+          image: '/images/lessons/chainlink-security.png',
           mechanisms: [
             {
               name: 'Decentralization',
@@ -197,6 +230,14 @@ const IntroductionLesson = () => {
             {
               name: 'Economic Incentives',
               description: 'Nodes are financially incentivized to provide accurate data'
+            },
+            {
+              name: 'Data Verification',
+              description: 'Multiple data sources are used to verify accuracy'
+            },
+            {
+              name: 'Audit Trails',
+              description: 'All operations are recorded on-chain for transparency'
             }
           ]
         }
@@ -208,6 +249,7 @@ const IntroductionLesson = () => {
         {
           title: 'DeFi Applications',
           content: 'Chainlink plays a crucial role in the DeFi ecosystem:',
+          image: '/images/lessons/chainlink-defi.png',
           applications: [
             {
               name: 'Price Feeds',
@@ -216,7 +258,9 @@ const IntroductionLesson = () => {
                 'Multiple data sources',
                 'High-frequency updates',
                 'Volume-weighted prices',
-                'Market depth data'
+                'Market depth data',
+                'Historical data',
+                'Real-time updates'
               ]
             },
             {
@@ -226,7 +270,9 @@ const IntroductionLesson = () => {
                 'Collateral valuation',
                 'Liquidation triggers',
                 'Interest rate calculation',
-                'Risk assessment'
+                'Risk assessment',
+                'Credit scoring',
+                'Loan management'
               ]
             },
             {
@@ -236,7 +282,9 @@ const IntroductionLesson = () => {
                 'Price settlement',
                 'Expiration triggers',
                 'Margin calculations',
-                'Position management'
+                'Position management',
+                'Risk management',
+                'Market making'
               ]
             }
           ]
@@ -244,6 +292,7 @@ const IntroductionLesson = () => {
         {
           title: 'Enterprise Solutions',
           content: 'Chainlink enables enterprise blockchain applications:',
+          image: '/images/lessons/chainlink-enterprise.png',
           solutions: [
             {
               name: 'Supply Chain',
@@ -252,7 +301,9 @@ const IntroductionLesson = () => {
                 'Real-time tracking',
                 'Quality verification',
                 'Automated payments',
-                'Compliance monitoring'
+                'Compliance monitoring',
+                'Inventory management',
+                'Logistics optimization'
               ]
             },
             {
@@ -262,7 +313,9 @@ const IntroductionLesson = () => {
                 'Claim verification',
                 'Payout automation',
                 'Risk assessment',
-                'Fraud prevention'
+                'Fraud prevention',
+                'Policy management',
+                'Underwriting'
               ]
             },
             {
@@ -272,7 +325,9 @@ const IntroductionLesson = () => {
                 'Random number generation',
                 'Tournament management',
                 'Reward distribution',
-                'Asset verification'
+                'Asset verification',
+                'Player tracking',
+                'Game mechanics'
               ]
             }
           ]
@@ -280,6 +335,7 @@ const IntroductionLesson = () => {
         {
           title: 'Emerging Applications',
           content: 'New and innovative use cases for Chainlink:',
+          image: '/images/lessons/chainlink-emerging.png',
           applications: [
             {
               name: 'NFTs',
@@ -288,7 +344,9 @@ const IntroductionLesson = () => {
                 'Real-time updates',
                 'External data integration',
                 'Dynamic pricing',
-                'Cross-chain functionality'
+                'Cross-chain functionality',
+                'Metadata management',
+                'Royalty distribution'
               ]
             },
             {
@@ -298,7 +356,9 @@ const IntroductionLesson = () => {
                 'Voting mechanisms',
                 'Proposal validation',
                 'Treasury management',
-                'Member verification'
+                'Member verification',
+                'Decision making',
+                'Resource allocation'
               ]
             },
             {
@@ -308,7 +368,9 @@ const IntroductionLesson = () => {
                 'Asset transfers',
                 'Message passing',
                 'State verification',
-                'Security monitoring'
+                'Security monitoring',
+                'Transaction routing',
+                'Network integration'
               ]
             }
           ]
@@ -328,6 +390,17 @@ const IntroductionLesson = () => {
           <section key={index} className="bg-white p-6 rounded-xl shadow-lg">
             <h2 className="text-2xl font-semibold text-indigo-800 mb-4">{section.title}</h2>
             <p className="text-gray-700 mb-4">{section.content}</p>
+            
+            {section.image && (
+              <div className="mb-6">
+                <img 
+                  src={section.image} 
+                  alt={section.title}
+                  className="w-full rounded-lg shadow-md"
+                />
+                <p className="text-sm text-gray-500 mt-2 text-center">Figure {index + 1}: {section.title}</p>
+              </div>
+            )}
             
             {section.keyPoints && (
               <div className="bg-indigo-50 p-4 rounded-lg">
