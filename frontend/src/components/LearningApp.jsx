@@ -5,6 +5,7 @@ import IntroductionLesson from './lessons/IntroductionLesson';
 import PriceFeedsLesson from './lessons/PriceFeedsLesson';
 import VRFLesson from './lessons/VRFLesson';
 import AutomationLesson from './lessons/AutomationLesson';
+import CourseCompletion from './lessons/CourseCompletion';
 
 const modules = [
   {
@@ -130,14 +131,17 @@ const Home = () => {
 const LearningApp = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/module/:id" element={<ModuleContent />} />
-        <Route path="/introduction/*" element={<IntroductionLesson />} />
-        <Route path="/price-feeds/*" element={<PriceFeedsLesson />} />
-        <Route path="/vrf/*" element={<VRFLesson />} />
-        <Route path="/automation/*" element={<AutomationLesson />} />
-      </Routes>
+      <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/module/:id" element={<ModuleContent />} />
+          <Route path="/introduction/*" element={<IntroductionLesson />} />
+          <Route path="/price-feeds/*" element={<PriceFeedsLesson />} />
+          <Route path="/vrf/*" element={<VRFLesson />} />
+          <Route path="/automation/*" element={<AutomationLesson />} />
+          <Route path="/course-completion" element={<CourseCompletion />} />
+        </Routes>
+      </div>
     </Router>
   );
 };
