@@ -6,6 +6,7 @@ import PriceFeedsLesson from './lessons/PriceFeedsLesson';
 import VRFLesson from './lessons/VRFLesson';
 import AutomationLesson from './lessons/AutomationLesson';
 import CCIPLesson from './lessons/CCIPLesson';
+import ProofOfReserveLesson from './lessons/ProofOfReserveLesson';
 import CourseCompletion from './lessons/CourseCompletion';
 
 const modules = [
@@ -58,6 +59,16 @@ const modules = [
     lessons: [
       { title: 'Understanding CCIP', path: '/ccip/understanding' },
       { title: 'CCIP in the Real World', path: '/ccip/real-world' }
+    ]
+  },
+  {
+    id: 6,
+    title: 'Chainlink Proof of Reserve',
+    description: 'Learn about verifying asset reserves in DeFi',
+    component: ProofOfReserveLesson,
+    lessons: [
+      { title: 'Understanding Proof of Reserve', path: '/proof-of-reserve/understanding' },
+      { title: 'Implementation Guide', path: '/proof-of-reserve/implementation' }
     ]
   }
 ];
@@ -148,6 +159,7 @@ const LearningApp = () => {
           <Route path="/vrf/*" element={<VRFLesson />} />
           <Route path="/automation/*" element={<AutomationLesson />} />
           <Route path="/ccip/*" element={<CCIPLesson />} />
+          <Route path="/proof-of-reserve/*" element={<ProofOfReserveLesson />} />
           <Route path="/course-completion" element={<CourseCompletion />} />
         </Routes>
       </div>
