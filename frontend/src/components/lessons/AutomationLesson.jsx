@@ -255,24 +255,22 @@ Perhaps most importantly, Chainlink Automation has shown that it's possible to b
                         <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                           {section.text}
                         </p>
-                        {section.image && (
-                          <div className="mt-3 sm:mt-4">
-                            <img
-                              src={section.image}
-                              alt={section.title}
-                              className="w-full rounded-lg shadow-md"
-                              loading="lazy"
-                            />
-                          </div>
-                        )}
                       </motion.div>
                     ))
                   ) : (
-                    <div className="prose max-w-none mb-6 sm:mb-8">
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ 
+                        duration: 0.4,
+                        ease: "easeOut"
+                      }}
+                      className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-sm will-change-transform"
+                    >
                       <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                         {currentContent.sections[activeSection].content}
                       </p>
-                    </div>
+                    </motion.div>
                   )}
                 </div>
 
