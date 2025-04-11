@@ -104,7 +104,14 @@ const ModuleCard = ({ module }) => {
             >
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <Link to={lesson.path} className="hover:text-indigo-600" onClick={(e) => e.stopPropagation()}>
+            <Link 
+              to={`/module/${module.id}${lesson.path}`} 
+              className="hover:text-indigo-600" 
+              onClick={(e) => {
+                e.stopPropagation();
+                navigate(`/module/${module.id}${lesson.path}`);
+              }}
+            >
               {lesson.title}
             </Link>
           </div>
@@ -115,7 +122,7 @@ const ModuleCard = ({ module }) => {
 };
 
 const ModuleContent = () => {
-  const { id } = useParams();
+  const { id, '*': path } = useParams();
   const module = modules.find(m => m.id === parseInt(id));
   
   if (!module) {
@@ -123,7 +130,7 @@ const ModuleContent = () => {
   }
 
   const ModuleComponent = module.component;
-  return <ModuleComponent />;
+  return <ModuleComponent path={path} />;
 };
 
 const Home = () => {
