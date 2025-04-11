@@ -82,117 +82,97 @@ What's perhaps most innovative about Chainlink's security model is its economic 
         },
         {
           title: 'Core Components',
-          content: `To truly understand how Chainlink works, we need to look at its core components - the building blocks that make this revolutionary technology possible. Each component plays a crucial role in ensuring that the network can reliably deliver real-world data to smart contracts.
-
-At the foundation of the network are the Chainlink nodes. These aren't just simple data relays - they're sophisticated systems that perform multiple critical functions. Each node is responsible for collecting data from various sources, validating its accuracy, and delivering it to the blockchain in a secure and reliable manner.
-
-The nodes operate in a decentralized network, working together to ensure that the data they provide is accurate and reliable. They use sophisticated algorithms to detect and filter out any anomalies or attempts at manipulation, ensuring that only high-quality data makes it to the blockchain.
-
-What's particularly interesting about the node architecture is how it balances efficiency with security. While each node operates independently, they work together to create a consensus about the correct data. This consensus mechanism is crucial for ensuring that the data provided to smart contracts is accurate and reliable.
-
-The network's architecture is designed for maximum reliability and security. Nodes are distributed across different geographic locations, preventing regional outages from affecting the entire network. The system includes sophisticated monitoring and alerting mechanisms, ensuring that any issues are quickly identified and addressed.
-
-But Chainlink isn't just about the nodes - it's also about the smart contracts that make everything work together. These contracts handle everything from data aggregation to payment processing, creating a seamless experience for developers who want to use Chainlink in their applications.
-
-The network's success has demonstrated something important about blockchain technology: true innovation isn't just about creating new features - it's about building systems that are fundamentally more secure, reliable, and efficient than what came before. Chainlink's architecture shows how careful design and attention to detail can create systems that are both powerful and trustworthy.`,
-          image: '/images/lessons/chainlink-architecture.png',
-          keyPoints: [
+          content: [
+            {
+              title: 'The Building Blocks of Chainlink',
+              text: `To truly understand how Chainlink works, we need to look at its core components - the building blocks that make this revolutionary technology possible. Each component plays a crucial role in ensuring that the network can reliably deliver real-world data to smart contracts.`,
+              image: '/images/lessons/chainlink-architecture.png'
+            },
+            {
+              title: 'Chainlink Nodes',
+              text: `At the foundation of the network are the Chainlink nodes. These aren't just simple data relays - they're sophisticated systems that perform multiple critical functions. Each node is responsible for collecting data from various sources, validating its accuracy, and delivering it to the blockchain in a secure and reliable manner.`
+            },
             {
               title: 'The Node Network',
+              text: `The nodes operate in a decentralized network, working together to ensure that the data they provide is accurate and reliable. They use sophisticated algorithms to detect and filter out any anomalies or attempts at manipulation, ensuring that only high-quality data makes it to the blockchain.`
+            },
+            {
+              title: 'Smart Contract Integration',
+              text: `One of Chainlink's greatest strengths is how seamlessly it integrates with smart contracts. The network provides a simple, standardized interface that developers can use to access real-world data in their applications. This interface abstracts away the complexity of the underlying system, making it easy for developers to focus on building their applications.`
+            },
+            {
+              title: 'Data Aggregation',
+              text: `What's particularly interesting about the node architecture is how it handles data aggregation. Instead of simply taking an average of all the data it receives, the network uses sophisticated algorithms to weight different data sources based on their reliability and track record. This creates a system where more reliable sources have more influence on the final result.`
+            },
+            {
+              title: 'Security and Reliability',
+              text: `The network's architecture is designed for maximum reliability and security. Nodes are distributed across different geographic locations, preventing regional outages from affecting the entire network. The system includes sophisticated monitoring and alerting mechanisms, ensuring that any issues are quickly identified and addressed.`
+            }
+          ],
+          keyPoints: [
+            {
+              title: 'Node Architecture',
               description: `The Chainlink node network is a marvel of modern technology, combining sophisticated software with economic incentives to create a system that's both secure and reliable. Each node in the network is a complex system that performs multiple critical functions, from data collection to validation and delivery.
 
 What's particularly impressive about the node network is how it handles the challenge of data aggregation. Instead of simply taking an average of all the data it receives, the network uses sophisticated algorithms to weight different data sources based on their reliability and track record. This creates a system where more reliable sources have more influence on the final result.
 
-The nodes also play a crucial role in maintaining the network's security. Each node operator must stake LINK tokens as collateral, creating a strong economic incentive to provide accurate data. If they provide incorrect information, they risk losing their stake. This creates a system where honesty isn't just the right thing to do - it's the most profitable strategy.
-
-The network's architecture is designed for maximum reliability. Nodes are distributed across different geographic locations, preventing regional outages from affecting the entire network. The system includes sophisticated monitoring and alerting mechanisms, ensuring that any issues are quickly identified and addressed.
-
-What's perhaps most impressive about the node network is how it's evolved over time. The system has successfully adapted to handle increasing demand while maintaining its high standards of security and reliability. This adaptability has been crucial to Chainlink's success, allowing it to become the backbone of the DeFi ecosystem.`
+The nodes also play a crucial role in maintaining the network's security. Each node operator must stake LINK tokens as collateral, creating a strong economic incentive to provide accurate data. If they provide incorrect information, they risk losing their stake. This creates a system where honesty isn't just the right thing to do - it's the most profitable strategy.`
             },
             {
-              title: 'Smart Contract Integration',
-              description: `One of Chainlink's greatest strengths is how seamlessly it integrates with smart contracts. The network provides a simple, standardized interface that developers can use to access real-world data in their applications. This interface abstracts away the complexity of the underlying system, making it easy for developers to focus on building their applications.
-
-The integration process is designed to be as straightforward as possible. Developers can simply import the Chainlink interface into their smart contracts and start using it to access data. The network handles all the complexity of data collection, validation, and delivery, allowing developers to focus on building their applications.
+              title: 'Integration Features',
+              description: `The integration process is designed to be as straightforward as possible. Developers can simply import the Chainlink interface into their smart contracts and start using it to access data. The network handles all the complexity of data collection, validation, and delivery, allowing developers to focus on building their applications.
 
 What's particularly impressive about the integration is how it handles edge cases and error conditions. The system includes sophisticated error handling and fallback mechanisms, ensuring that applications can continue to function even if there are temporary issues with the network.
 
-The integration also includes features for gas optimization and cost management. Developers can configure their contracts to use different levels of data quality and update frequency, allowing them to balance cost with performance. This flexibility has been crucial to Chainlink's adoption, making it accessible to projects of all sizes.
-
-The success of Chainlink's smart contract integration has demonstrated something important about blockchain technology: true innovation isn't just about creating new features - it's about making those features accessible and easy to use. Chainlink's integration shows how careful design and attention to detail can create systems that are both powerful and user-friendly.`
+The integration also includes features for gas optimization and cost management. Developers can configure their contracts to use different levels of data quality and update frequency, allowing them to balance cost with performance. This flexibility has been crucial to Chainlink's adoption, making it accessible to projects of all sizes.`
             }
           ]
         },
         {
           title: 'Use Cases',
-          content: 'Chainlink enables a wide range of applications across various industries:',
-          image: '/images/lessons/chainlink-use-cases.png',
+          content: [
+            {
+              title: 'Transforming Industries with Chainlink',
+              text: `Chainlink's impact extends far beyond just providing data to smart contracts. It's transforming entire industries by enabling new types of applications and business models that were previously impossible. From decentralized finance to supply chain management, Chainlink is powering the next generation of blockchain applications.`,
+              image: '/images/lessons/chainlink-use-cases.png'
+            },
+            {
+              title: 'Decentralized Finance (DeFi)',
+              text: `In the world of DeFi, Chainlink is the backbone of many critical operations. Price feeds enable accurate trading on decentralized exchanges, while lending protocols use Chainlink to determine collateral values and trigger liquidations. The network's reliability and security make it the go-to solution for DeFi applications that handle billions of dollars in value.`
+            },
+            {
+              title: 'Supply Chain Management',
+              text: `Chainlink is revolutionizing supply chain management by providing verifiable data about product movements, quality checks, and delivery confirmations. This enables automated payments, inventory management, and compliance tracking, all while maintaining transparency and security throughout the supply chain.`
+            },
+            {
+              title: 'Insurance and Risk Management',
+              text: `The insurance industry is being transformed by Chainlink's ability to provide reliable data for claim verification and automated payouts. Smart contracts can now automatically process claims based on verified data, reducing fraud and improving efficiency in the claims process.`
+            },
+            {
+              title: 'Gaming and NFTs',
+              text: `In the gaming and NFT space, Chainlink provides verifiable randomness for fair gameplay and unique asset generation. This enables provably fair gaming experiences and ensures that NFT attributes are generated in a way that's transparent and tamper-proof.`
+            },
+            {
+              title: 'Cross-Chain Applications',
+              text: `Chainlink's ability to work across different blockchains is enabling a new wave of cross-chain applications. From asset transfers to message passing, Chainlink provides the secure infrastructure needed to connect different blockchain networks and enable seamless interoperability.`
+            }
+          ],
           keyPoints: [
             {
               title: 'DeFi Applications',
-              description: `Chainlink is widely used in DeFi for various critical operations.
+              description: `Chainlink is widely used in DeFi for various critical operations. Price feeds enable accurate trading on decentralized exchanges, while lending protocols use Chainlink to determine collateral values and trigger liquidations. The network's reliability and security make it the go-to solution for DeFi applications that handle billions of dollars in value.
 
-Key Applications:
-1. Price Feeds:
-   - DEX trading
-   - Lending protocols
-   - Derivatives
-   - Stablecoins
-   - Insurance products
+What's particularly impressive about Chainlink's role in DeFi is how it enables complex financial products that were previously impossible. From sophisticated derivatives to automated trading strategies, Chainlink provides the reliable data infrastructure needed to make these applications work securely and efficiently.
 
-2. Lending Protocols:
-   - Collateral valuation
-   - Loan-to-value ratios
-   - Liquidation triggers
-   - Interest rate calculation
-   - Risk assessment
-
-3. Derivatives:
-   - Price settlement
-   - Margin calculations
-   - Position management
-   - Risk management
-   - Contract execution
-
-4. Stablecoins:
-   - Price pegging
-   - Collateral management
-   - Minting/burning
-   - Stability mechanisms
-   - Reserve management`
+The network's impact on DeFi has been profound. It has enabled the creation of complex financial products, automated insurance policies, and sophisticated trading strategies - all of which require reliable, real-world data to function properly. The network's proven track record in high-value environments has made it the go-to solution for developers who need secure, reliable data for their smart contracts.`
             },
             {
               title: 'Enterprise Solutions',
-              description: `Chainlink provides enterprise-grade solutions for various industries.
+              description: `Chainlink provides enterprise-grade solutions for various industries. In supply chain management, it enables tracking of shipments, quality verification, and automated payments. In insurance, it facilitates claim verification, payout automation, and risk assessment.
 
-Key Applications:
-1. Supply Chain:
-   - Tracking shipments
-   - Quality verification
-   - Automated payments
-   - Inventory management
-   - Compliance tracking
+What makes Chainlink particularly valuable for enterprises is its ability to provide secure, reliable data while maintaining privacy and compliance requirements. The network's architecture allows for custom configurations that meet specific industry standards and regulatory requirements.
 
-2. Insurance:
-   - Claim verification
-   - Payout automation
-   - Risk assessment
-   - Policy management
-   - Fraud prevention
-
-3. Gaming:
-   - Random number generation
-   - In-game events
-   - Reward distribution
-   - Asset verification
-   - Tournament management
-
-4. Cross-Chain:
-   - Asset transfers
-   - Message passing
-   - State verification
-   - Bridge security
-   - Network integration`
+The success of Chainlink in enterprise applications has demonstrated something important about blockchain technology: true innovation isn't just about creating new features - it's about making those features accessible and useful for real-world business applications. Chainlink's enterprise solutions show how careful design and attention to detail can create systems that are both powerful and practical.`
             }
           ]
         }
