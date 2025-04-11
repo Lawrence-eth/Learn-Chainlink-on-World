@@ -110,7 +110,7 @@ const ModuleCard = ({ module }) => {
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition-all"
+      className="bg-[rgb(30,30,30)] rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition-all"
       onClick={() => navigate(`/module/${module.id}`)}
     >
       <div className="flex items-center mb-4">
@@ -119,16 +119,16 @@ const ModuleCard = ({ module }) => {
           alt={`${module.title} icon`} 
           className="w-10 h-10 object-contain mr-4"
         />
-        <h2 className="text-2xl font-semibold text-indigo-800">
+        <h2 className="text-2xl font-semibold text-white">
           {module.title}
         </h2>
       </div>
-      <p className="text-gray-600 mb-4">{module.description}</p>
+      <p className="text-gray-300 mb-4">{module.description}</p>
       <div className="space-y-2">
         {module.lessons.map((lesson, index) => (
           <div
             key={index}
-            className="flex items-center text-gray-700"
+            className="flex items-center text-gray-300"
           >
             <svg
               className="w-5 h-5 text-indigo-500 mr-2"
@@ -141,7 +141,7 @@ const ModuleCard = ({ module }) => {
             >
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span className="text-gray-700">
+            <span className="text-gray-300">
               {lesson.title}
             </span>
           </div>
