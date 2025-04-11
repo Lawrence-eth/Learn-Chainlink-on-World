@@ -17,23 +17,45 @@ const IntroductionLesson = () => {
       sections: [
         {
           title: 'Introduction to Chainlink',
-          content: `Imagine you're building a smart contract that needs to know the current price of Bitcoin to execute a trade. How would your contract get this information? This is where Chainlink comes in - it's like a bridge that connects your smart contracts to the real world.
-
-Chainlink is a revolutionary technology that solves one of the biggest challenges in blockchain: how to get reliable, real-world data onto the blockchain. Think of it as a decentralized network of data providers that work together to bring accurate information to your smart contracts.
-
-The beauty of Chainlink lies in its decentralized nature. Instead of relying on a single source of truth (which could be manipulated or fail), Chainlink uses multiple independent nodes that collect, verify, and deliver data. This means your smart contracts can access the same high-quality data that traditional financial institutions use, but in a way that's secure, reliable, and transparent.
-
-But Chainlink isn't just about getting data - it's about getting the right data, at the right time, in a way that's secure and reliable. Each piece of data that comes through Chainlink is verified by multiple independent sources, aggregated to ensure accuracy, and then delivered to your smart contract with cryptographic proof that it hasn't been tampered with.
-
-The network is powered by LINK tokens, which serve as both a payment mechanism and a security guarantee. Node operators stake LINK tokens as collateral, creating a strong economic incentive to provide accurate data. If they provide incorrect information, they risk losing their stake. This creates a system where honesty is the most profitable strategy.
-
-What makes Chainlink truly special is its ability to work with any blockchain. Whether you're building on Ethereum, Polygon, or any other blockchain, Chainlink can provide the data your smart contracts need. This interoperability has made Chainlink the industry standard for decentralized oracle services, securing billions of dollars in value across various DeFi applications.
-
-The network's architecture is designed for maximum reliability. Nodes are distributed across different geographic locations, preventing regional outages from affecting the entire network. The system includes sophisticated monitoring and alerting mechanisms, ensuring that any issues are quickly identified and addressed.
-
-Chainlink's impact on the blockchain ecosystem has been profound. It has enabled the creation of complex financial products, automated insurance policies, and sophisticated gaming applications - all of which require reliable, real-world data to function properly. The network's proven track record in high-value environments has made it the go-to solution for developers who need secure, reliable data for their smart contracts.
-
-As we continue to explore the world of blockchain and smart contracts, Chainlink's role as a bridge between the blockchain and the real world will only become more important. It's not just a tool for developers - it's a fundamental building block of the decentralized future we're creating together.`,
+          content: [
+            {
+              title: 'The Bridge Between Blockchains and the Real World',
+              text: `Imagine you're building a smart contract that needs to know the current price of Bitcoin to execute a trade. How would your contract get this information? This is where Chainlink comes in - it's like a bridge that connects your smart contracts to the real world.`,
+              image: '/images/lessons/chainlink-bridge.png'
+            },
+            {
+              title: 'Solving a Critical Challenge',
+              text: `Chainlink is a revolutionary technology that solves one of the biggest challenges in blockchain: how to get reliable, real-world data onto the blockchain. Think of it as a decentralized network of data providers that work together to bring accurate information to your smart contracts.`
+            },
+            {
+              title: 'The Power of Decentralization',
+              text: `The beauty of Chainlink lies in its decentralized nature. Instead of relying on a single source of truth (which could be manipulated or fail), Chainlink uses multiple independent nodes that collect, verify, and deliver data. This means your smart contracts can access the same high-quality data that traditional financial institutions use, but in a way that's secure, reliable, and transparent.`
+            },
+            {
+              title: 'How Chainlink Works',
+              text: `But Chainlink isn't just about getting data - it's about getting the right data, at the right time, in a way that's secure and reliable. Each piece of data that comes through Chainlink is verified by multiple independent sources, aggregated to ensure accuracy, and then delivered to your smart contract with cryptographic proof that it hasn't been tampered with.`
+            },
+            {
+              title: 'The LINK Token',
+              text: `The network is powered by LINK tokens, which serve as both a payment mechanism and a security guarantee. Node operators stake LINK tokens as collateral, creating a strong economic incentive to provide accurate data. If they provide incorrect information, they risk losing their stake. This creates a system where honesty is the most profitable strategy.`
+            },
+            {
+              title: 'Cross-Chain Compatibility',
+              text: `What makes Chainlink truly special is its ability to work with any blockchain. Whether you're building on Ethereum, Polygon, or any other blockchain, Chainlink can provide the data your smart contracts need. This interoperability has made Chainlink the industry standard for decentralized oracle services, securing billions of dollars in value across various DeFi applications.`
+            },
+            {
+              title: 'Reliability and Security',
+              text: `The network's architecture is designed for maximum reliability. Nodes are distributed across different geographic locations, preventing regional outages from affecting the entire network. The system includes sophisticated monitoring and alerting mechanisms, ensuring that any issues are quickly identified and addressed.`
+            },
+            {
+              title: 'Real-World Impact',
+              text: `Chainlink's impact on the blockchain ecosystem has been profound. It has enabled the creation of complex financial products, automated insurance policies, and sophisticated gaming applications - all of which require reliable, real-world data to function properly. The network's proven track record in high-value environments has made it the go-to solution for developers who need secure, reliable data for their smart contracts.`
+            },
+            {
+              title: 'The Future of Chainlink',
+              text: `As we continue to explore the world of blockchain and smart contracts, Chainlink's role as a bridge between the blockchain and the real world will only become more important. It's not just a tool for developers - it's a fundamental building block of the decentralized future we're creating together.`
+            }
+          ],
           image: '/images/lessons/chainlink-bridge.png',
           keyPoints: [
             {
@@ -44,9 +66,7 @@ The network's decentralized architecture means that data is collected and verifi
 
 What's particularly interesting is how Chainlink's decentralization extends beyond just the technical layer. The network's economic model is also decentralized, with node operators competing to provide the best service while being economically incentivized to maintain high standards of accuracy and reliability.
 
-This multi-layered approach to decentralization has proven incredibly effective. The network has successfully operated through market crashes, exchange outages, and various other challenges that would have crippled a centralized system. It's this resilience that has made Chainlink the backbone of the DeFi ecosystem, securing billions of dollars in value across various applications.
-
-The network's success has also demonstrated something important about blockchain technology: true decentralization isn't just about the protocol layer - it's about creating systems where power and control are distributed across multiple independent entities, creating a more resilient and trustworthy system overall.`
+This multi-layered approach to decentralization has proven incredibly effective. The network has successfully operated through market crashes, exchange outages, and various other challenges that would have crippled a centralized system. It's this resilience that has made Chainlink the backbone of the DeFi ecosystem, securing billions of dollars in value across various applications.`
             },
             {
               title: 'Security Through Innovation',
@@ -56,9 +76,7 @@ At the heart of Chainlink's security model is its use of multiple independent da
 
 The system's cryptographic security is particularly impressive. Each piece of data that comes through the network is signed by the node operators, creating a verifiable chain of custody that can be audited on the blockchain. This means that if there's ever any question about the accuracy of the data, it's possible to trace it back to its source and verify its authenticity.
 
-What's perhaps most innovative about Chainlink's security model is its economic security layer. Node operators must stake LINK tokens as collateral, creating a strong economic incentive to provide accurate data. If they provide incorrect information, they risk losing their stake. This creates a system where honesty isn't just the right thing to do - it's the most profitable strategy.
-
-The network's security measures have been battle-tested in some of the most demanding environments in DeFi. From high-value trading platforms to complex financial derivatives, Chainlink has proven its ability to provide secure, reliable data even under the most challenging conditions. This track record has made it the industry standard for secure oracle services, trusted by developers and users alike.`
+What's perhaps most innovative about Chainlink's security model is its economic security layer. Node operators must stake LINK tokens as collateral, creating a strong economic incentive to provide accurate data. If they provide incorrect information, they risk losing their stake. This creates a system where honesty isn't just the right thing to do - it's the most profitable strategy.`
             }
           ]
         },
@@ -523,21 +541,41 @@ Implementation Steps:
                   {currentContent.sections[activeSection].title}
                 </h2>
 
-                <div className="prose max-w-none mb-8">
-                  <p className="text-gray-700 leading-relaxed">
-                    {currentContent.sections[activeSection].content}
-                  </p>
+                <div className="space-y-8">
+                  {Array.isArray(currentContent.sections[activeSection].content) ? (
+                    currentContent.sections[activeSection].content.map((section, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="bg-indigo-50 p-6 rounded-lg"
+                      >
+                        <h3 className="text-xl font-semibold text-indigo-900 mb-3">
+                          {section.title}
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          {section.text}
+                        </p>
+                        {section.image && (
+                          <div className="mt-4">
+                            <img
+                              src={section.image}
+                              alt={section.title}
+                              className="w-full rounded-lg shadow-md"
+                            />
+                          </div>
+                        )}
+                      </motion.div>
+                    ))
+                  ) : (
+                    <div className="prose max-w-none mb-8">
+                      <p className="text-gray-700 leading-relaxed">
+                        {currentContent.sections[activeSection].content}
+                      </p>
+                    </div>
+                  )}
                 </div>
-
-                {currentContent.sections[activeSection].image && (
-                  <div className="mb-8">
-                    <img
-                      src={currentContent.sections[activeSection].image}
-                      alt={currentContent.sections[activeSection].title}
-                      className="w-full rounded-lg shadow-md"
-                    />
-                  </div>
-                )}
 
                 <div className="space-y-6">
                   {currentContent.sections[activeSection].keyPoints?.map((point, index) => (
