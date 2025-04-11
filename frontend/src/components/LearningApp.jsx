@@ -110,7 +110,7 @@ const ModuleCard = ({ module }) => {
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="bg-[rgb(255,255,255)] rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition-all"
+      className="bg-[rgb(245,247,252)] rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition-all"
       onClick={() => navigate(`/module/${module.id}`)}
     >
       <div className="flex items-center mb-4">
