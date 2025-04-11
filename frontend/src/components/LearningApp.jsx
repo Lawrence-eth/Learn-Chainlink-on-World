@@ -10,12 +10,73 @@ import ProofOfReserveLesson from './lessons/ProofOfReserveLesson';
 import FunctionsLesson from './lessons/FunctionsLesson';
 import CourseCompletion from './lessons/CourseCompletion';
 
+// Custom SVG icons for each module
+const moduleIcons = {
+  introduction: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+    </svg>
+  ),
+  priceFeeds: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+      <line x1="12" y1="20" x2="12" y2="10"></line>
+      <line x1="18" y1="20" x2="18" y2="4"></line>
+      <line x1="6" y1="20" x2="6" y2="16"></line>
+      <path d="M2 20h20"></path>
+    </svg>
+  ),
+  vrf: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+      <path d="M4 8h16v12H4z"></path>
+      <path d="M8 8v4"></path>
+      <path d="M12 8v4"></path>
+      <path d="M16 8v4"></path>
+      <path d="M2 6l10-4 10 4"></path>
+    </svg>
+  ),
+  automation: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+      <circle cx="15.5" cy="8.5" r="1.5"></circle>
+      <path d="M9 15l.01-.01"></path>
+      <path d="M15 15l.01-.01"></path>
+      <path d="M9 18l6-6"></path>
+    </svg>
+  ),
+  ccip: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+      <path d="M4 10l4-1 6 3 6-3"></path>
+      <path d="M4 14l4-1 6 3 6-3"></path>
+      <path d="M4 18l4-1 6 3 6-3"></path>
+      <line x1="4" y1="6" x2="4" y2="18"></line>
+      <line x1="20" y1="6" x2="20" y2="18"></line>
+    </svg>
+  ),
+  proofOfReserve: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+      <path d="M12 8v8"></path>
+      <path d="M8 12h8"></path>
+      <path d="M3 3l18 18"></path>
+    </svg>
+  ),
+  functions: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+      <polyline points="16 18 22 12 16 6"></polyline>
+      <polyline points="8 6 2 12 8 18"></polyline>
+      <line x1="12" y1="2" x2="12" y2="22"></line>
+    </svg>
+  )
+};
+
 const modules = [
   {
     id: 1,
     title: 'Introduction to Chainlink',
     description: 'Learn the basics of Chainlink and its role in blockchain technology',
     component: IntroductionLesson,
+    icon: moduleIcons.introduction,
     lessons: [
       { title: 'What is Chainlink?', path: '/introduction/what-is-chainlink' },
       { title: 'How Chainlink Works', path: '/introduction/how-it-works' },
@@ -27,6 +88,7 @@ const modules = [
     title: 'Chainlink Price Feeds',
     description: 'Master working with Chainlink Price Feeds',
     component: PriceFeedsLesson,
+    icon: moduleIcons.priceFeeds,
     lessons: [
       { title: 'Understanding Price Feeds', path: '/price-feeds/understanding' },
       { title: 'Best Practices', path: '/price-feeds/best-practices' }
@@ -37,6 +99,7 @@ const modules = [
     title: 'Chainlink VRF',
     description: 'Learn about Verifiable Random Functions',
     component: VRFLesson,
+    icon: moduleIcons.vrf,
     lessons: [
       { title: 'Understanding VRF', path: '/vrf/understanding' },
       { title: 'VRF in the Real World', path: '/vrf/real-world' }
@@ -47,6 +110,7 @@ const modules = [
     title: 'Chainlink Automation',
     description: 'Explore automated smart contract execution',
     component: AutomationLesson,
+    icon: moduleIcons.automation,
     lessons: [
       { title: 'Understanding Automation', path: '/automation/understanding' },
       { title: 'Automation in the Real World', path: '/automation/real-world' }
@@ -57,6 +121,7 @@ const modules = [
     title: 'Chainlink CCIP',
     description: 'Explore cross-chain interoperability solutions',
     component: CCIPLesson,
+    icon: moduleIcons.ccip,
     lessons: [
       { title: 'Understanding CCIP', path: '/ccip/understanding' },
       { title: 'CCIP in the Real World', path: '/ccip/real-world' }
@@ -67,6 +132,7 @@ const modules = [
     title: 'Chainlink Proof of Reserve',
     description: 'Learn about verifying asset reserves in DeFi',
     component: ProofOfReserveLesson,
+    icon: moduleIcons.proofOfReserve,
     lessons: [
       { title: 'The Foundation of Trust in DeFi', path: '/proof-of-reserve/understanding' },
       { title: 'Technical Implementation', path: '/proof-of-reserve/implementation' }
@@ -77,6 +143,7 @@ const modules = [
     title: 'Chainlink Functions',
     description: 'Learn about connecting smart contracts to any API',
     component: FunctionsLesson,
+    icon: moduleIcons.functions,
     lessons: [
       { title: 'The Power of Web3 Functions', path: '/functions/understanding' },
       { title: 'Technical Implementation', path: '/functions/implementation' }
@@ -94,9 +161,14 @@ const ModuleCard = ({ module }) => {
       className="bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition-all"
       onClick={() => navigate(`/module/${module.id}`)}
     >
-      <h2 className="text-2xl font-semibold text-indigo-800 mb-3">
-        {module.title}
-      </h2>
+      <div className="flex items-center mb-4">
+        <div className="bg-indigo-100 p-3 rounded-full mr-4 flex items-center justify-center text-indigo-600">
+          {module.icon}
+        </div>
+        <h2 className="text-2xl font-semibold text-indigo-800">
+          {module.title}
+        </h2>
+      </div>
       <p className="text-gray-600 mb-4">{module.description}</p>
       <div className="space-y-2">
         {module.lessons.map((lesson, index) => (
