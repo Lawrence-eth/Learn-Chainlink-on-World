@@ -1,14 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaCheckCircle, FaChevronLeft, FaHome } from 'react-icons/fa';
+import { FaCheckCircle, FaHome } from 'react-icons/fa';
 
 const CourseCompletion = () => {
   const navigate = useNavigate();
-
-  const handleBackToLessons = () => {
-    navigate('/lessons');
-  };
 
   const handleBackToHome = () => {
     navigate('/');
@@ -40,15 +36,7 @@ const CourseCompletion = () => {
             You have successfully completed the course. Your knowledge of Chainlink will help you build secure and reliable blockchain applications.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={handleBackToLessons}
-              className="px-6 py-3 bg-indigo-100 text-indigo-900 rounded-lg hover:bg-indigo-200 transition-colors flex items-center justify-center space-x-2"
-            >
-              <FaChevronLeft />
-              <span>Back to Lessons</span>
-            </button>
-
+          <div className="flex justify-center">
             <button
               onClick={handleBackToHome}
               className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center space-x-2"
