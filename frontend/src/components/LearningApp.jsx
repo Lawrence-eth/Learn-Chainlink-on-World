@@ -67,8 +67,8 @@ const modules = [
     description: 'Learn about verifying asset reserves in DeFi',
     component: ProofOfReserveLesson,
     lessons: [
-      { title: 'Understanding Proof of Reserve', path: '/proof-of-reserve/understanding' },
-      { title: 'Implementation Guide', path: '/proof-of-reserve/implementation' }
+      { title: 'The Foundation of Trust in DeFi', path: '/proof-of-reserve/understanding' },
+      { title: 'Proof of Reserve in Practice', path: '/proof-of-reserve/implementation' }
     ]
   }
 ];
