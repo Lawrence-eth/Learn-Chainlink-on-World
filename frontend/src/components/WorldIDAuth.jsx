@@ -3,21 +3,37 @@ import { useState } from 'react';
 
 const WorldIDAuth = () => {
   const [isVerified, setIsVerified] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleVerify = (proof) => {
-    // Here you would typically send the proof to your backend for verification
-    console.log('Proof received:', proof);
-    setIsVerified(true);
+    try {
+      // Here you would typically send the proof to your backend for verification
+      console.log('Proof received:', proof);
+      setIsVerified(true);
+      setError(null);
+    } catch (err) {
+      setError('Verification failed. Please try again.');
+      console.error('Verification error:', err);
+    }
   };
 
   return (
     <div className="flex flex-col items-center justify-center p-4">
+      {error && (
+        <div className="text-red-500 mb-4">
+          {error}
+        </div>
+      )}
       {!isVerified ? (
         <IDKitWidget
-          app_id="app_staging_123" // Replace with your actual app ID
-          action="login"
-          signal="user-login"
+          app_id={import.meta.env.VITE_WORLD_ID_APP_ID}
+          action={import.meta.env.VITE_WORLD_ID_ACTION}
+          signal={import.meta.env.VITE_WORLD_ID_SIGNAL}
           onSuccess={handleVerify}
+          onError={(error) => {
+            console.error('World ID error:', error);
+            setError('Authentication failed. Please try again.');
+          }}
           theme="light"
           autoClose
         >
