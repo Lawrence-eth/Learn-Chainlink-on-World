@@ -5,5 +5,8 @@
   "scripts": {
     "dev": "cd frontend && npm run dev",
     "build": "cd frontend && npm run build"
+  },
+  "dependencies": {
+    "@worldcoin/idkit": "^2.0.2"
   }
-} 
+}
